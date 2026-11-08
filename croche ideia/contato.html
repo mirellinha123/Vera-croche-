@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Arte do Crochê</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+      <nav class="navbar navbar-expand-lg navbar-floating">
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <a class="navbar-brand m-0" href="index.html">
+          <img src="img\logo.png" alt="Logo" class="navbar-logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Porodutos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Contato Section -->
+    <section class="py-5 bg-pastel-lavender">
+        <div class="container">
+            <h1 class="text-center mb-5 text-pastel-purple">Entre em Contato</h1>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card bg-white border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <form id="contactForm" method="POST" action="processar_contato.php" novalidate>
+                                <div class="mb-4">
+                                    <label for="nome" class="form-label text-pastel-purple fw-bold">Nome
+                                        Completo</label>
+                                    <input type="text" class="form-control bg-pastel-cream border-pastel-pink" id="nome"
+                                        name="nome" required>
+                                    <div class="invalid-feedback text-danger">Por favor, insira seu nome.</div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="email" class="form-label text-pastel-purple fw-bold">Email</label>
+                                    <input type="email" class="form-control bg-pastel-cream border-pastel-pink"
+                                        id="email" name="email" required>
+                                    <div class="invalid-feedback text-danger">Por favor, insira um email válido.</div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="telefone" class="form-label text-pastel-purple fw-bold">Telefone
+                                        (Opcional)</label>
+                                    <input type="tel" class="form-control bg-pastel-cream border-pastel-pink"
+                                        id="telefone" name="telefone">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="assunto" class="form-label text-pastel-purple fw-bold">Assunto</label>
+                                    <select class="form-select bg-pastel-cream border-pastel-pink" id="assunto"
+                                        name="assunto" required>
+                                        <option value="">Selecione um assunto...</option>
+                                        <option value="dúvida">Dúvida sobre crochê</option>
+                                        <option value="projeto">Sugestão de projeto</option>
+                                        <option value="collab">Colaboração</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                    <div class="invalid-feedback text-danger">Por favor, selecione um assunto.</div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensagem" class="form-label text-pastel-purple fw-bold">Mensagem</label>
+                                    <textarea class="form-control bg-pastel-cream border-pastel-pink" id="mensagem"
+                                        name="mensagem" rows="5" required></textarea>
+                                    <div class="invalid-feedback text-danger">Por favor, insira sua mensagem.</div>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="termos" name="termos" required>
+                                    <label class="form-check-label text-pastel-dark" for="termos">
+                                        Concordo em receber comunicações sobre novos projetos e tutoriais
+                                    </label>
+                                    <div class="invalid-feedback text-danger">Você deve concordar antes de enviar.</div>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-lg btn-pastel-pink fw-bold">Enviar
+                                        Mensagem</button>
+                                </div>
+                            </form>
+
+                            <div id="successMessage" class="alert alert-success alert-dismissible fade show d-none mt-3"
+                                role="alert">
+                                Mensagem enviada com sucesso! Obrigada por entrar em contato.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+
+                            <div id="errorMessage" class="alert alert-danger alert-dismissible fade show d-none mt-3"
+                                role="alert">
+                                Ocorreu um erro ao enviar a mensagem. Tente novamente.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pastel-pink text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Arte do Crochê. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>
